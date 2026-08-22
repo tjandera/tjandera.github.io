@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(178, 182, 186);
+}
+h1 {
+    color: rgb(159, 15, 15);
+    background-color:rgb(194, 204, 212);
+    text-align: center;
+    border: 4px solid;
+}
+.img1 {
+display: block;
+width: 300px;
+margin: 0 auto;
+border : 5px solid;
+}
+
+.img2 {
+display: block;
+width: 300px;
+margin: 0 auto;
+padding: 10px;
+}
+
+h2 {
+    color: rgb(159, 15, 15);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-shadow: 2px 2px 4px;
+}
+h3 {
+    color: rgb(159, 15, 15);
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-shadow: 2px 2px 4px;
+}
+p {
+    text-align: center;
+}
+
+.btnWrapper {
+    text-align: center;
+}
+
+#playBtn {
+    padding: 15px 30px;
+    font-size: 24px;
+    background-color: rgb(159, 15, 15);
+    color: white;
+}
+
