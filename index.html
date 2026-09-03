@@ -39,17 +39,13 @@
       line-height: 1.4;
     }
 
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
-    li + li {
-      margin-top: 12px;
-    }
-
-    a {
+    .links a {
       display: block;
       padding: 14px 16px;
       border: 2px solid #222;
@@ -57,19 +53,14 @@
       color: #222;
       text-decoration: none;
       font-weight: bold;
+      cursor: pointer;
     }
 
-    a:hover {
+    .links a:hover,
+    .links a:focus {
       background: #222;
       color: #fff;
-    }
-
-    a span {
-      display: block;
-      margin-top: 4px;
-      font-size: 13px;
-      font-weight: normal;
-      opacity: 0.8;
+      outline: none;
     }
   </style>
 </head>
@@ -77,32 +68,12 @@
   <main>
     <h1>tjandera.github.io</h1>
     <p>Pick a page to open:</p>
-    <ul>
-      <li>
-        <a href="challenge1.html">
-          Challenge 1
-          <span>challenge1.html</span>
-        </a>
-      </li>
-      <li>
-        <a href="challenge2.html">
-          Challenge 2
-          <span>challenge2.html</span>
-        </a>
-      </li>
-      <li>
-        <a href="challenge3.html">
-          Challenge 3
-          <span>challenge3.html</span>
-        </a>
-      </li>
-      <li>
-        <a href="celebrity.html">
-          Celebrity page
-          <span>Inde Navarrette fan page</span>
-        </a>
-      </li>
-    </ul>
+    <div class="links">
+      <a href="/challenge1.html">Challenge 1</a>
+      <a href="/challenge2.html">Challenge 2</a>
+      <a href="/challenge3.html">Challenge 3</a>
+      <a href="/celebrity.html">Celebrity page</a>
+    </div>
   </main>
 </body>
 </html>
