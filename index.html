@@ -4,137 +4,105 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>tjandera.github.io</title>
-  <link rel="stylesheet" href="explorer.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+      display: flex;
+      justify-content: center;
+      padding: 40px 16px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 520px;
+      background: #fff;
+      border: 2px solid #222;
+      padding: 28px 24px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+
+    p {
+      margin: 0 0 24px;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li + li {
+      margin-top: 12px;
+    }
+
+    a {
+      display: block;
+      padding: 14px 16px;
+      border: 2px solid #222;
+      background: #eee;
+      color: #222;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      background: #222;
+      color: #fff;
+    }
+
+    a span {
+      display: block;
+      margin-top: 4px;
+      font-size: 13px;
+      font-weight: normal;
+      opacity: 0.8;
+    }
+  </style>
 </head>
 <body>
-  <div class="app">
-    <header class="titlebar">
-      <div class="traffic">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
-      </div>
-      <div class="title">tjandera.github.io — Explorer</div>
-    </header>
-
-    <div class="workspace">
-      <aside class="sidebar">
-        <div class="sidebar-header">EXPLORER</div>
-        <div class="tree-root" id="treeRoot">
-          <button type="button" class="tree-item folder open" data-folder="root" aria-expanded="true">
-            <span class="chevron">▾</span>
-            <span class="icon folder-icon">📁</span>
-            <span class="label">tjandera.github.io</span>
-          </button>
-          <ul class="tree-children open" data-children="root">
-            <li>
-              <a class="tree-item file" href="celebrity.html">
-                <span class="chevron spacer"></span>
-                <span class="icon">📄</span>
-                <span class="label">celebrity.html</span>
-              </a>
-            </li>
-            <li>
-              <button type="button" class="tree-item folder" data-folder="public" aria-expanded="false">
-                <span class="chevron">▸</span>
-                <span class="icon folder-icon">📁</span>
-                <span class="label">public</span>
-              </button>
-              <ul class="tree-children" data-children="public">
-                <li>
-                  <a class="tree-item file" href="public/200.gif">
-                    <span class="chevron spacer"></span>
-                    <span class="icon">🖼️</span>
-                    <span class="label">200.gif</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="tree-item file" href="public/Forever.mp3">
-                    <span class="chevron spacer"></span>
-                    <span class="icon">🎵</span>
-                    <span class="label">Forever.mp3</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="tree-item file" href="public/SCR-20260820-scll.jpeg">
-                    <span class="chevron spacer"></span>
-                    <span class="icon">🖼️</span>
-                    <span class="label">SCR-20260820-scll.jpeg</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="tree-item file" href="public/nono.mp3">
-                    <span class="chevron spacer"></span>
-                    <span class="icon">🎵</span>
-                    <span class="label">nono.mp3</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="tree-item file" href="public/tumblr_082edbe0779938e90a6908bcf4949c4c_0c6f3c2e_540.gif">
-                    <span class="chevron spacer"></span>
-                    <span class="icon">🖼️</span>
-                    <span class="label">tumblr_…_540.gif</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a class="tree-item file" href="script.js">
-                <span class="chevron spacer"></span>
-                <span class="icon">📜</span>
-                <span class="label">script.js</span>
-              </a>
-            </li>
-            <li>
-              <a class="tree-item file" href="styles.css">
-                <span class="chevron spacer"></span>
-                <span class="icon">🎨</span>
-                <span class="label">styles.css</span>
-              </a>
-            </li>
-            <li>
-              <a class="tree-item file" href="LICENSE">
-                <span class="chevron spacer"></span>
-                <span class="icon">📃</span>
-                <span class="label">LICENSE</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </aside>
-
-      <main class="editor">
-        <div class="tabs">
-          <div class="tab active">
-            <span class="tab-icon">📄</span>
-            <span>Welcome</span>
-          </div>
-        </div>
-        <div class="editor-body">
-          <pre class="welcome"><code><span class="line-num">1</span> <span class="cm">// tjandera.github.io</span>
-<span class="line-num">2</span>
-<span class="line-num">3</span> <span class="kw">const</span> site = {
-<span class="line-num">4</span>   owner: <span class="str">"Matthew Tjandera"</span>,
-<span class="line-num">5</span>   type: <span class="str">"GitHub Pages"</span>,
-<span class="line-num">6</span>   tip: <span class="str">"Open a file from the explorer →"</span>
-<span class="line-num">7</span> };
-<span class="line-num">8</span>
-<span class="line-num">9</span> <span class="cm">// Start here:</span>
-<span class="line-num">10</span> open(<span class="str">"celebrity.html"</span>); <span class="cm">// Inde Navarrette fan page</span></code></pre>
-          <p class="hint">
-            Click <a href="celebrity.html">celebrity.html</a> in the sidebar to open the fan page.
-          </p>
-        </div>
-      </main>
-    </div>
-
-    <footer class="statusbar">
-      <span>main*</span>
-      <span>UTF-8</span>
-      <span>HTML</span>
-    </footer>
-  </div>
-
-  <script src="explorer.js"></script>
+  <main>
+    <h1>tjandera.github.io</h1>
+    <p>Pick a page to open:</p>
+    <ul>
+      <li>
+        <a href="challenge1.html">
+          Challenge 1
+          <span>challenge1.html</span>
+        </a>
+      </li>
+      <li>
+        <a href="challenge2.html">
+          Challenge 2
+          <span>challenge2.html</span>
+        </a>
+      </li>
+      <li>
+        <a href="challenge3.html">
+          Challenge 3
+          <span>challenge3.html</span>
+        </a>
+      </li>
+      <li>
+        <a href="celebrity.html">
+          Celebrity page
+          <span>Inde Navarrette fan page</span>
+        </a>
+      </li>
+    </ul>
+  </main>
 </body>
 </html>
